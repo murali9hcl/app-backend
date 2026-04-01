@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 
 @RestController
 @RequestMapping("/app")
@@ -18,7 +17,7 @@ public class FileController {
     @Autowired
     FileService fileService;
 
-    // Uploading a file
+
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public ResponseEntity<String> uploadExcelFile(@RequestParam("file") MultipartFile file, @RequestParam("createdBy") String createdBy){
         try {
